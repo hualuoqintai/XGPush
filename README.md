@@ -6,7 +6,7 @@
 Pods file中添加
 
 ```
-pod 'tegdata-XGPush'
+pod 'teg-XGPush'
 ```
 
 ## 更新日志
