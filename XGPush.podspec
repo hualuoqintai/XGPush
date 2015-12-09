@@ -8,5 +8,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target	= "6.0"
   spec.source					= {:git => "https://github.com/tegdata/XGPush"}
   spec.source_files				= "XGPush/*.h"
-  spec.vendored_libraries		= 'XGPush/*.a'
+  spec.vendored_libraries		= "XGPush/*.a"
+  spec.dependency				= "z"
 end
