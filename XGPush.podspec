@@ -5,7 +5,6 @@ Pod::Spec.new do |spec|
   spec.homepage					= "http://xg.qq.com"
   spec.license					= "MIT"
   spec.platform					= :ios, "9.0"
-  spec.ios.deployment_target	= "6.0"
   spec.source					= {:git => "https://github.com/tegdata/XGPush"}
   spec.source_files				= "XGPush/*.h"
   spec.vendored_libraries		= "XGPush/*.a"
