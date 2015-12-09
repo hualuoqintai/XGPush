@@ -6,7 +6,7 @@
 Pods file中添加
 
 ```
-pod 'XGPush', :podspec => 'https://raw.githubusercontent.com/tegdata/XGPush/master/XGPush.podspec'
+pod 'tegdata-XGPush'
 ```
 
 ## 更新日志
