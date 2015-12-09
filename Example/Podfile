@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'XGPush_Example', :exclusive => true do
+  pod "XGPush", :path => "../"
+end
+
+target 'XGPush_Tests', :exclusive => true do
+  pod "XGPush", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end

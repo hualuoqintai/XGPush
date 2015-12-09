@@ -1,0 +1,25 @@
+{
+  "name": "XGPush",
+  "version": "0.1.0",
+  "summary": "A short description of XGPush.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/XGPush",
+  "license": "MIT",
+  "authors": {
+    "tyzual": "e.tyzual@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/XGPush.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "XGPush": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
