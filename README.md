@@ -6,7 +6,7 @@
 Pods file中添加
 
 ```
-pod 'teg-XGPush'
+pod 'QQ_XGPush'
 ```
 
 ## 更新日志
