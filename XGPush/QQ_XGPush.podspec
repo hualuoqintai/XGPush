@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.authors					= "tencent TEG"
   spec.license					= "MIT"
   spec.platform					= :ios, "6.0"
-  spec.frameworks				= "CFNetwork", "SystemConfiguration", "CoreTelephony", "CoreGraphics", "Foundation"
+  spec.frameworks				= "CFNetwork", "SystemConfiguration", "CoreTelephony", "CoreGraphics", "Foundation", "UserNotifications"
   spec.libraries				= "z", "sqlite3"
   spec.source					= { :git => "https://github.com/tegdata/XGPush.git", :tag => spec.version }
   spec.source_files				= "XGPush/*.h"
