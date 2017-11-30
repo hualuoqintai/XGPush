@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class CLLocation;
+
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -326,8 +328,16 @@ typedef NS_ENUM(NSUInteger, XGPushTokenBindType) {
  */
 - (void)xgPushDidReportNotification:(BOOL)isSuccess error:(nullable NSError *)error;
 
-@end
 
+/**
+ @brief 监控设置信鸽服务器下发角标的情况
+
+ @param isSuccess isSuccess 上报是否成功
+ @param error 设置失败的信息
+ */
+- (void)xgPushDidSetBadge:(BOOL)isSuccess error:(nullable NSError *)error;
+
+@end
 
 /**
  @brief 管理信鸽推送服务的对象，负责注册推送权限、消息的管理、调试模式的开关设置等
@@ -335,7 +345,6 @@ typedef NS_ENUM(NSUInteger, XGPushTokenBindType) {
 @interface XGPush : NSObject
 
 #pragma mark - 初始化相关
-
 
 /**
  @brief 获取信鸽推送管理的单例对象
@@ -394,6 +403,22 @@ typedef NS_ENUM(NSUInteger, XGPushTokenBindType) {
  @note 请在实现application delegate 的 application:didFinishLaunchingWithOptions:或者application:didReceiveRemoteNotification:的方法中调用此接口，参数就使用这两个方法中的NSDictionaryl类型的参数即可，从而完成推送消息的数据统计
  */
 - (void)reportXGNotificationInfo:(nonnull NSDictionary *)info;
+
+/**
+ @brief 上报地理位置信息
+
+ @param latitude 纬度
+ @param longitude 经度
+ */
+- (void)reportLocationWithLatitude:(double)latitude longitude:(double)longitude;
+
+/**
+ @brief 上报当前App角标数到信鸽服务器
+
+ @param badgeNumber 应用的角标数
+ @note (后台维护中)此接口是为了实现角标+1的功能，服务器会在这个数值基础上进行角标数新增的操作，调用成功之后，会覆盖之前值。
+ */
+- (void)setBadge:(NSInteger)badgeNumber;
 
 /**
  @brief 查询设备通知权限是否被用户允许
